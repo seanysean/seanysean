@@ -1,0 +1,67 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+body {
+    background: #fff;
+    font-family: sans-serif;
+}
+.section {
+    padding: 10em;
+    box-sizing: border-box;
+}
+.section-1 {
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(#88F1C7,#85B8C8);
+    position: fixed;
+}
+.section-2 {
+    margin-top: 100vh;
+    position: relative;
+    background: #fff;
+    min-height: 100%;
+}
+.section-1 .name {
+    color: RGBa(255,255,255,0.8);
+}
+.actual-name-xd {
+    color: #5F72D4;
+}
+.project-heading {
+    color: #5F8DF9;
+    margin-left: 0.5em;
+}
+.header {
+    transition: 0.2s ease;
+}
+h1 {
+    font-size: 10em;
+    margin: 0;
+    text-shadow: 0 3px 6px RGBa(0,0,0,0.16); 
+}
+.section-1 .info {
+    color: #fff;
+}
+.section-2 .info {
+    color: RGBa(0,0,0,0.55);
+}
+.info {
+    font-size: 2em;
+    max-width: 50%;
+}
+.projects {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 30vh 30vh;
+    grid-gap: 2em;
+}
+.project-container {
+    background: #6597EF;
+    border-radius: 1em;
+    box-shadow: 0 3px 6px RGBa(0,0,0,0.16);
+}
