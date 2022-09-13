@@ -1,3 +1,7 @@
+:root {
+    --changingHue: 156;
+}
+
 html,
 body {
     margin: 0;
@@ -17,7 +21,8 @@ body {
     left: 0;
     height: 100%;
     width: 100%;
-    background: linear-gradient(#88F1C7,#85B8C8);
+    /*background: linear-gradient(#88F1C7,#85B8C8);*/
+    background: linear-gradient(hsl(var(--changingHue), 79%, 74%),hsl(calc(var(--changingHue) + 38), 38%, 65%));
     position: fixed;
 }
 .section-2 {
@@ -30,10 +35,12 @@ body {
     color: RGBa(255,255,255,0.8);
 }
 .actual-name-xd {
-    color: #5F72D4;
+    /*color: #5F72D4;*/
+    color: hsl(var(--changingHue), 30%, 40%);
 }
 .project-heading {
-    color: #5F8DF9;
+    /*color: #5F8DF9;*/
+    color: hsl(var(--changingHue), 30%, 50%);
     margin-left: 0.5em;
 }
 .header {
@@ -61,7 +68,7 @@ h1 {
     grid-gap: 2em;
 }
 .project-container {
-    background: #6597EF;
+    background: linear-gradient(50deg,hsl(var(--changingHue), 30%, 40%),hsl(calc(var(--changingHue) + 10), 30%, 50%));
     border-radius: 1em;
     box-shadow: 0 3px 6px RGBa(0,0,0,0.16);
 }

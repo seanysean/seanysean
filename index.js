@@ -6,7 +6,7 @@ window.addEventListener('scroll',e=>{
         const convertHeightToPercentage = 100 * window.scrollY / window.innerHeight;
         const op = Math.abs((convertHeightToPercentage * -0.01));
         console.log(convertHeightToPercentage);
-        if (convertHeightToPercentage > 50) {
+        if (convertHeightToPercentage > 70) {
             document.querySelector('.section-1 .header').style.opacity = '0';
         } else {
             document.querySelector('.section-1 .header').style.opacity = '1';
@@ -16,3 +16,15 @@ window.addEventListener('scroll',e=>{
 
     }
 });
+
+const hueOffset = 38,
+      sectionOne = document.querySelector('.section-1'),
+      root = document.querySelector(':root');
+let hue = 156;
+setInterval(()=>{
+    window.requestAnimationFrame(()=>{
+        hue++;
+        root.style.setProperty('--changingHue',hue);
+        //sectionOne.style.backgroundImage = `linear-gradient(hsl(${hue}, 79%, 74%),hsl(${hue + hueOffset}, 38%, 65%))`;
+    });
+},200);
