@@ -5,15 +5,10 @@ window.addEventListener('scroll',e=>{
         const op = Math.abs((convertHeightToPercentage * -0.01));
         if (convertHeightToPercentage > 70) {
             document.querySelector('.section-1 .header').style.opacity = '0';
-            document.querySelectorAll('.project-image').forEach(img=>{
-                img.style.opacity = 1;
-            });
         } else {
             document.querySelector('.section-1 .header').style.opacity = '1';
         }
         document.querySelector('.section-2').style.background = `RGBa(255,255,255,${op})`;
-    } else {
-
     }
 });
 
@@ -33,5 +28,5 @@ document.querySelectorAll('.project-container').forEach(project=>{
     });
     project.addEventListener('mouseleave',()=>{
         project.classList.remove('open');
-    })
+    });
 });

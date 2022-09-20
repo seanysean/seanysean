@@ -36,7 +36,7 @@ body {
 }
 .actual-name-xd {
     /*color: #5F72D4;*/
-    color: hsl(var(--changingHue), 30%, 40%);
+    color: hsl(var(--changingHue), 40%, 40%);
 }
 .project-heading {
     /*color: #5F8DF9;*/
@@ -78,10 +78,46 @@ h1 {
     color: #fff;
     text-shadow: 0 1px 3px RGBa(0,0,0,0.6)
 }
+.project-container.pseudo {
+    text-decoration: none;
+    background: #fff;
+}
+.project-container.pseudo::before {
+    position: absolute;
+    content: "";
+    display: block;
+    background: linear-gradient(50deg,hsl(var(--changingHue), 30%, 40%),hsl(calc(var(--changingHue) + 10), 30%, 50%));
+    height: 100%;
+    width: 100%;
+    transition: 0.2s ease;
+    opacity: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.project-container.pseudo span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 3em;
+    font-weight: bold;
+}
+.project-container.pseudo:hover::before {
+    opacity: 0;
+    width: 40%;
+    height: 40%;
+}
+.project-container.pseudo:hover span {
+    background: linear-gradient(50deg,hsl(var(--changingHue), 30%, 50%),hsl(calc(var(--changingHue) + 50), 30%, 60%));
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    text-shadow: none;
+}
 .project-image {
     width: 100%;
     position: absolute;
-    opacity: 0;
     transition: 0.2s ease;
 }
 .project-info {
@@ -94,6 +130,9 @@ h1 {
     transition: 0.25s ease;
     box-sizing: border-box;
     height: 5vw;
+}
+.project-name {
+    transition: 0.25s ease;
 }
 .project-container.open {
     box-shadow: 0 1px 3px RGBa(0,0,0,0.16);
@@ -139,11 +178,12 @@ h1 {
     content: "";
     display: block;
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: hsla(var(--changingHue), 30%, 10%,0.7);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 50%;
+    height: 50%;
+    background: linear-gradient(50deg,hsl(var(--changingHue), 30%, 40%),hsl(calc(var(--changingHue) + 10), 30%, 60%));
     border-radius: 3px;
     opacity: 0;
     transition: 0.2s ease;
@@ -154,6 +194,8 @@ h1 {
 }
 .project-links a:hover::before {
     opacity: 1;
+    height: 100%;
+    width: 100%;
 }
 .language {
     padding: 2px 5px;
